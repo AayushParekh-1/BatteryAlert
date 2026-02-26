@@ -1,103 +1,82 @@
-# 🔋 Battery Monitor App
+# 🔋 Battery Guardian
 
-> Never overcharge or drain your battery again! Your laptop's personal battery guardian.
-
----
-
-## 💡 What is This?
-
-**Battery Monitor** is a lightweight desktop application built with **Python** and **Tkinter** that watches your battery percentage and alerts you when it’s:
-
-- 🔌 **Fully charged** (time to unplug)
-- 🔋 **Too low** (time to plug in)
-
-This helps protect your battery health and saves you from accidental overcharging or deep discharging.
+> **Your laptop's personal health guardian.** A premium, lightweight desktop application that protects your battery from overcharging and deep discharging.
 
 ---
 
-## 🧠 Why Use This App?
+## 💡 What is Battery Guardian?
 
-Laptop batteries lose capacity faster when:
+Most laptop batteries degrade faster when they are pushed to extremes—staying at 100% while plugged in or dropping below 20%. **Battery Guardian** sits quietly in your background and alerts you exactly when it's time to act.
 
-- You **let them drain below 20%**
-- You **keep them at 100% while charging**
-- You **miss the OS notifications** (which are easy to ignore)
-
-### ✅ This app gives you:
-- Low battery alerts at **20%**
-- Full battery alerts at **98%**
-- 🔔 Persistent popup + 🎵 sound alerts every few seconds
-- 💻 Lightweight, background-friendly design
+### ✨ Key Features
+- **🌍 Cross-Platform:** Native support for macOS (`afplay`), Windows (`winsound`), and Linux (`aplay`).
+- **🎨 Premium UI:** Beautiful, dark-themed macOS-style popups with SF Pro typography.
+- **🧠 Smart Alert Logic:** No notification spam! The app only alerts you when a threshold is crossed and resets only when the battery return to a safe range.
+- **🎵 Audio Alerts:** Distinctive sound cues for "Plug In" and "Unplug" notifications.
+- **🧵 Performance First:** Multithreaded architecture ensures it never slows down your machine.
 
 ---
 
-## 🎧 Features
+## �️ Tech Stack
 
-- 🪟 **Popup notifications** using `tkinter`
-- 🎵 **Sound alerts** using:
-  - `winsound` on **Windows**
-  - `afplay` on **macOS**
-- ⚡ **Smart status tracking** — alerts only when status changes
-- 🧵 **Multithreaded** for a responsive UI
-- ⏲️ **Customizable** thresholds and check intervals
+- **Python 3.x**
+- **Tkinter** (for the modern GUI)
+- **psutil** (for precise battery monitoring)
+- **Subprocess** (for low-latency audio playback)
 
 ---
 
-## 📦 Requirements
+## 🚀 Getting Started
 
-- Python 3.x
-- `psutil` library (for battery status)
-- `.wav` sound files for alerts
-
-Install `psutil` using:
-
+### 1. Clone the Repository
 ```bash
-pip install psutil
-````
+git clone https://github.com/your-username/battery-monitor.git
+cd battery-monitor
+```
+
+### 2. Install Dependencies
+Ensure you have Python installed, then run:
+```bash
+pip3 install -r requirements.txt
+```
+
+### 3. Launch the App
+```bash
+python3 Batteries.py
+```
 
 ---
 
-🚀 Getting Started
-1) Clone the Repo
-   
-```bash
-   git clone https://github.com/your-username/battery-monitor.git
-   cd battery-monitor
-````
+## ⚙️ Configuration
 
-For MacOS users: 
+The app is pre-configured with industry-standard healthy thresholds:
+- **Low Battery Alert:** 20% (Red/Orange Warning)
+- **Full Battery Alert:** 98% (Green Notification)
+- **Check Interval:** Every 10 seconds (optimized for battery life)
 
-```bash
-   python3 Batteries.py
-````
-
-
-For Windows Users:
-
-```bash
-   python3 BatteriesWin.py
-````
+*To customize these, simply edit the constants at the top of `Batteries.py`.*
 
 ---
 
-## Acknowledgements
-Built with love to help laptop users:
-Improve battery life
-Avoid battery degradation
-Stay stress-free while working
-Because good batteries make happy laptops! 🧠🔋
+## � Project Structure
+
+- `Batteries.py`: The unified core application logic.
+- `requirements.txt`: Project dependencies.
+- `ChargeMe.wav`: Alert sound for low battery.
+- `Charge-Remove.wav`: Alert sound for full battery.
+
+---
+
+## 🤝 Contributing
+
+Found a bug or have a design suggestion? We'd love to see it!
+1. Fork the project.
+2. Create your feature branch (`git checkout -b feature/AmazingFeature`).
+3. Commit your changes (`git commit -m 'Add some AmazingFeature'`).
+4. Push to the branch (`git push origin feature/AmazingFeature`).
+5. Open a Pull Request.
 
 ---
 
 ## 📄 License
-MIT License — Use freely, modify easily, and share widely.
-
----
-
-## 🙋‍♂️ Contribute
-Found a bug? Want a new feature?
-Feel free to open an issue or submit a pull request. Contributions are always welcome!
-
-
-
-
+Built with ❤️ to keep your laptop healthy.
